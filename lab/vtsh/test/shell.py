@@ -1,9 +1,11 @@
+import os
 import subprocess
 
 
 class Shell:
     def __init__(self, path: str):
-        self._path = path
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._path = os.path.abspath(os.path.join(base_dir, path))
 
     def execute(self, cmd: str):
         shell = subprocess.Popen(
