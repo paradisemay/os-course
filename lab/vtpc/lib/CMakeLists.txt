@@ -1,6 +1,6 @@
 add_library(
     vtpc
-    STATIC
+    SHARED
     vtpc.c
 )
 
